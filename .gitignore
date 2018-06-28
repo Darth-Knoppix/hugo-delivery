@@ -1,4 +1,4 @@
 .cache
 node_modules/
 public/
-site/static/
+site/static/bundled/
