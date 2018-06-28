@@ -1,0 +1,25 @@
+{
+  "name": "hugo-delivery",
+  "description": "Build websites with Hugo and Parcel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Seth Corker",
+    "email": "seth.corker@gmail.com",
+    "url": "http://sethcorker.me"
+  },
+  "scripts": {
+    "start": "concurrently --kill-others \"parcel watch src/base.scss src/index.js --out-dir site/static/bundled/\" \"hugo server --source site --watch --destination ../dist\"",
+    "build": "parcel build src/base.scss src/index.js --out-dir site/static/bundled/ && hugo --source site --destination ../public",
+    "clean": "rimraf ./site/static/bundled ./dist ./public"
+  },
+  "dependencies": {
+    "parcel-bundler": "^1.9.3"
+  },
+  "devDependencies": {
+    "concurrently": "^3.6.0",
+    "node-sass": "^4.9.0",
+    "rimraf": "^2.6.2"
+  }
+}
