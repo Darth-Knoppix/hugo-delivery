@@ -2,3 +2,4 @@
 node_modules/
 public/
 site/static/bundled/
+dist/
