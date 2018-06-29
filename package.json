@@ -12,7 +12,8 @@
   "scripts": {
     "start": "concurrently --kill-others \"parcel watch src/base.scss src/index.js --out-dir site/static/bundled/\" \"hugo server --source site --watch --destination ../dist\"",
     "build": "parcel build src/base.scss src/index.js --out-dir site/static/bundled/ && hugo --source site --destination ../public",
-    "clean": "rimraf ./site/static/bundled ./dist ./public"
+    "clean": "rimraf ./site/static/bundled ./dist ./public",
+    "hugo": "hugo --source site/"
   },
   "dependencies": {
     "parcel-bundler": "^1.9.3"
